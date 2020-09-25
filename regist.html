@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="yuki" content="sign up">
+  	<title>注册界面</title>
+	<link type="text/css" rel="stylesheet" href="css/register.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script><!--引用jquery-->
+	<script type="text/javascript" src="js/regist.js"></script>
+</head>
+<body>
+    <div class="header">
+		<ul class="menu">
+            <li class="home"><a href="index.html">Home</a></li>
+            <li style="float:right" class="sign"><a href="regist.html">Sign up</a></li>
+            <li class="login_in"><a href="login.html" >Login</a></li>
+        </ul>
+    </div>
+	<div class="main">
+		<div class="top">
+            <h2>欢迎加入我们！</h2>
+			<h3>THE FIRST SECURITY GROUP</h3>
+		</div>
+		<!-- 注册界面 -->
+		<div class="signup" id="dom2">
+			<h4>Sign Up</h4>
+			<div id="form2">
+				<div class="field">
+					<input type="text" name="username" id="username" required>
+					<span class="label">Username</span>
+				</div>
+				<div class="field">
+					<input type="password" name="password" id="password" required>
+					<span class="label">Password</span>
+				</div>
+				<div class="field">
+					<input type="text" name="school" id="school" required>
+					<span class="label">School</span>
+				</div>
+				<div class="field">
+					<input type="number" name="grade" id="grade" required>
+					<span class="label">Grade</span>
+				</div>
+				<div class="field">
+					<button type="button" onclick="signup()"><a class="signup_button" onclick="signup()">Sign Up</a></button>
+				</div>
+				<div class="sign_up">
+					<a href="login.html">I already have an account！</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="yuki" content="arctile">
+  	<title>文章界面</title>
+	<link type="text/css" rel="stylesheet" href="css/article.css">
+</head>
+<body>
+	<div class="main">
+	<div class="header">
+		<ul class="menu">
+            <li class="home"><a href="index.html">Home</a></li>
+			<li class="article"><a href="article.html">Article</a></li>
+        </ul>
+    </div>
+	<article>
+		<header>
+	  		<h1 id="at_1">text1</h1>
+	  		<h2>text1</h2>
+	  		<h5 class="color_gray">
+			<p>
+				<span>作者:yuki</span>
+				<time>时间:2020/3/5</time>
+			</p>
+	  	</h5>
+   		<p class="text_indent"></p>
+   		<p class="text_indent">
+			组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。组件系统让我们可以用独立可复用的小组件来构建大型应用，
+		几乎任意类型的应用的界面都可以抽象为一个组件树<br/><p class="text_indent">组件是可复用的 Vue 实例，我们可以在一个通过new Vue创建的Vue根实例中，
+		把这个组件作为自定义元素来使用。<br/><p class="text_indent">通常一个应用会以一棵嵌套的组件树的形式来组织，例如，你可能会有页头、侧边栏、内容区等
+		组件，每个组件又包含了其它的像导航链接、博文之类的组件。为了能在模板中使用，这些组件必须先注册以便 Vue 能够识别。这里有两种组件的注册类型：<b>全局注册</b>
+		和 <b>局部注册</b>
+   		</p>
+		</header>
+ 	</article>
+ 	<article>
+		<header>
+	  		<h2 id="at_2">text2</h2>
+		</header>
+	  	<h5 class="color_gray">
+			<p>
+				<span>作者:yuki</span>
+				<time>时间:2020/3/7</time>
+			</p>
+	  	</h5>
+   		<p class="text_indent">
+		模板内的表达式非常便利，但是设计它们的初衷是用于简单运算的。在模板中放入太多的逻辑会让模板过重且难以维护
+		计算属性关键词: <b>computed</b>。计算属性在处理一些复杂逻辑时是很有用的。
+   		</p>
+   		<p class="text_indent">
+		可以使用 methods 来替代 computed，效果上两个都是一样的，但是 computed 是基于它的依赖缓存，只有相关依赖发生改变时才会重新取值。而使用 methods ，
+		在重新渲染的时候，函数总会重新调用执行。也可以通过在表达式中调用方法methods来达到同样的效果
+ 		</p>
+   		<p class="text_indent">
+		我们可以将同一函数定义为一个方法而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是计算属性是基于它们的响应式依赖进行缓存的。
+		只在相关响应式依赖发生改变时它们才会重新求值。这就意味着只要message还没有发生改变，多次访问reverseMessage计算属性会立即返回之前的计算结果，而不必
+		再次执行函数。
+		</p>
+		<p class="text_indent">
+		相比之下，每当触发重新渲染时，调用方法将总会再次执行函数。我们为什么需要缓存？假设我们有一个性能开销比较大的计算属性 A，它需要遍历一个巨大的数
+		组并做大量的计算。然后我们可能有其他的计算属性依赖于 A。如果没有缓存，我们将不可避免的多次执行 A 的 getter！如果你不希望有缓存，请用方法来替代。	
+		</p>
+	 </article> 
+	 </div>
+ <footer>
+   <span>版权所有&copy;yuki</span>
+ </footer>
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* 登录页面样式 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body,h1,h2,h3{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+/* 链接样式 */
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: tahoma;
+}
+/* 头部导航条 */
+.header{
+	height: 4rem;
+    background-color:#3b5998;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 0px 6px gray;
+}
+
+.header:hover{
+	box-shadow: 0px 0px 10px gray;
+}
+
+li.sign a{
+	color: white;
+	padding-right: 11px;
+	padding-left: 38px;
+}
+
+li.home a{
+	padding-left: 38px;
+	padding-right: 15px;
+}
+
+li.login_in a{
+	padding-right: 15px;
+	padding-left: 38px;
+}
+
+.login_in:before{
+	content: "";
+	background: url(../img/login.png) no-repeat;
+	background-size: 30px 30px;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 1.2rem;
+	left: 6.3rem;
+}
+.home::before{
+	content: "";
+	background: url(../img/menu.png) no-repeat;
+	background-size: 27px 27px;
+	position: absolute;
+	width: 27px;
+	height: 27px;
+	top: 1.2rem;
+	left: 0.4rem;
+}
+.sign:before{
+	content: "";
+	background: url(../img/signup.png) no-repeat;
+	background-size: 30px 30px;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 1.2rem;
+	right: 4rem;
+}
+
+.header a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 17px;
+    padding: 14px 30px;
+}
+
+.header ul{
+	margin: 8px 0 0 0;
+    list-style: none;
+}
+
+.header a:hover{
+    background-color:#ddd;
+	color: #000;
+}
+/* 主页面 */
+.main{
+	width: 100%;
+	height: 780px;
+	background-color: #e9eaef;
+}
+/* 上半页面 */
+.top{
+    background-color:whitesmoke;
+    height: 50%;
+}
+
+.top h2{
+	color: black;
+	text-align: center;
+	font-size: 2rem;
+	padding: 200px 0 25px;
+}
+
+.top h3{
+	color: black;
+	text-align: center;
+	font-size: 1rem;
+	padding-bottom: 100px;
+
+}
+/* 登录界面 */
+.login{
+	width: 400px;
+	height: 260px;
+	margin: auto;
+	background-color: white;
+	position: relative;
+	top: -70px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.login:hover{
+	box-shadow: 0px 0px 8px gray;
+}
+
+.login h4{
+	color: gray;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.login .field{
+	margin-top: 30px;
+	position: relative;
+}
+
+.sign_up{
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+	cursor: pointer;
+}
+
+.sign_up a{
+	color:gray;
+}
+
+.sign_up a:hover{
+	color:#4277b2;
+}
+
+.login input{
+	display: block;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #999;
+	color: gray;
+	font-size: 1rem;
+}
+
+
+.login button{
+	display: block;
+	width: 100%;
+	outline: none;
+	background-color: #4277b2;
+    border: none; 
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px gray;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 10px;
+}
+
+a.login_button{
+    color: white;
+}
+.login button:hover{
+    background-color: #5392db;
+
+}
+/* 输入名字和密码时的事件 */
+.login .label{
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	transition: 0.2s ease all;
+	color: #757575;
+}
+
+.login input:focus ~ .label,
+.login input:not(:focus):valid ~ .label{
+	top: -17px;
+	font-size: .8rem;
+	opacity: 1;
+}
+/* 永无BUG＼(￣▽￣)／!!!*/
